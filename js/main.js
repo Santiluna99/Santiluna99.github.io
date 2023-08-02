@@ -1,3 +1,11 @@
+document.addEventListener("DOMContentLoaded", function() {
+    console.log(
+      "      /\\_/\\  \n" +
+      "     ( o.o ) \n" +
+      "      > ^ <  \n\n" +
+      "¡Espero que te guste mi portafolio! 🐱"
+    );
+  });
 jQuery(document).ready(function($) {
 
 	'use strict';
