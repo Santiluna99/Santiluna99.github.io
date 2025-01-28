@@ -314,6 +314,9 @@ nav a:hover::before {
 .slides .slide img {
   width: 100%;
 }
+.slides .slide video {
+	width: 100%;
+  }
 
 
 .main-btn a:hover {

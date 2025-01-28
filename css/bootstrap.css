@@ -87,6 +87,9 @@ sub {
 img {
   border: 0;
 }
+video {
+  border: 0;
+}
 svg:not(:root) {
   overflow: hidden;
 }
@@ -226,7 +229,13 @@ th {
   img {
     page-break-inside: avoid;
   }
+  video {
+    page-break-inside: avoid;
+  }
   img {
+    max-width: 100% !important;
+  }
+  video{
     max-width: 100% !important;
   }
   p,
@@ -934,6 +943,9 @@ figure {
 img {
   vertical-align: middle;
 }
+video {
+  vertical-align: middle;
+}
 .img-responsive,
 .thumbnail > img,
 .thumbnail a > img,
@@ -943,6 +955,15 @@ img {
   max-width: 100%;
   height: auto;
 }
+.thumbnail > video,
+.thumbnail a > video,
+.carousel-inner > .item > video,
+.carousel-inner > .item > a > video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .img-rounded {
   border-radius: 6px;
 }
@@ -959,7 +980,23 @@ img {
        -o-transition: all .2s ease-in-out;
           transition: all .2s ease-in-out;
 }
+.video-thumbnail {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  padding: 4px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: all .2s ease-in-out;
+       -o-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+}
 .img-circle {
+  border-radius: 50%;
+}
+.video-circle {
   border-radius: 50%;
 }
 hr {
@@ -3681,6 +3718,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a > img {
   max-width: none;
 }
+.nav > li > a > video {
+  max-width: none;
+}
 .nav-tabs {
   border-bottom: 1px solid #ddd;
 }
@@ -3952,6 +3992,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   text-decoration: none;
 }
 .navbar-brand > img {
+  display: block;
+}
+.navbar-brand > video {
   display: block;
 }
 @media (min-width: 768px) {
@@ -4672,6 +4715,11 @@ a.badge:focus {
 }
 .thumbnail > img,
 .thumbnail a > img {
+  margin-right: auto;
+  margin-left: auto;
+}
+.thumbnail > video,
+.thumbnail a > video {
   margin-right: auto;
   margin-left: auto;
 }
@@ -5830,6 +5878,10 @@ button.close {
 }
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
+  line-height: 1;
+}
+.carousel-inner > .item > video,
+.carousel-inner > .item > a > video {
   line-height: 1;
 }
 @media all and (transform-3d), (-webkit-transform-3d) {
